@@ -1,0 +1,1 @@
+Use the honey_auditorv3.py file only. v1 and v2 does not have efficient iptable rules updation and can break your firewall.
