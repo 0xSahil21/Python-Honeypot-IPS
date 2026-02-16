@@ -36,7 +36,7 @@ pip install fpdf
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/Python-Honeypot-IPS.git](https://github.com/YOUR_USERNAME/Python-Honeypot-IPS.git)
+git clone [https://github.com/0xSahil21/Python-Honeypot-IPS.git](https://github.com/0xSahil21/Python-Honeypot-IPS.git)
 cd Python-Honeypot-IPS
 ```
 
