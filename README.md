@@ -1,0 +1,33 @@
+# Honey-Auditor: Automated Network Intrusion Prevention System (NIPS) 🛡️
+
+
+## 📌 Overview
+**Honey-Auditor** is a custom-built Active Defense system designed to detect, log, and block unauthorized SSH brute-force attempts in real-time. 
+
+Unlike passive honeypots that only record attacks, Honey-Auditor acts as an **IPS (Intrusion Prevention System)** by interacting directly with the Linux Kernel Firewall (`iptables`) to neutralize threats immediately upon detection.
+
+## 🚀 Features
+* **Active Deception:** Simulates a vulnerable SSH service (Port 2222) with a fake server banner to lure attackers.
+* **Real-Time Blocking:** Automates `iptables` to drop traffic from attacker IPs instantly.
+* **Idempotent Logic:** Checks existing firewall rules before adding new ones, preventing rule duplication and performance degradation.
+* **GRC Compliance:** Automatically generates professional PDF Incident Response Reports for audit trails.
+
+## 🛠️ Architecture
+1.  **Listener:** Python socket server binds to `0.0.0.0:2222`.
+2.  **Detector:** Logs connection attempts and extracts Source IP.
+3.  **Defender:** Executes `iptables` commands via `subprocess` to ban the IP.
+4.  **Reporter:** `fpdf` library parses logs and outputs a forensic PDF.
+
+## 📦 Installation
+
+### Prerequisites
+* Linux Environment (Kali Linux recommended)
+* Python 3.x
+* Root/Sudo privileges (required for `iptables`)
+
+### Dependencies
+Install the required Python library for PDF generation:
+```bash
+sudo apt install python3-fpdf
+# OR
+pip install fpdf
