@@ -31,9 +31,9 @@ Install the required Python library for PDF generation:
 sudo apt install python3-fpdf
 # OR
 pip install fpdf
+```
 
-
-### 💻 Usage
+## 💻 Usage
 
 ### 1. Clone the Repository
 ```bash
